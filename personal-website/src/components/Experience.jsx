@@ -18,7 +18,7 @@ const experiences = [
     id: 2,
     role: 'University Coordinator',
     company: "Hadiyyatul Hajj wal Mu'tamir",
-    location: 'Bangladesh',
+    location: 'Saudi Arabia',
     period: 'Dec 2025 - Present',
     duration: 'Present',
     type: 'Current',
@@ -55,7 +55,7 @@ const experiences = [
   },
   {
     id: 5,
-    role: 'Director & Mathematics Teacher',
+    role: 'Mathematics Teacher',
     company: 'Nucleus Coaching Center',
     location: 'Sylhet, Bangladesh',
     period: 'Director: 2022-2023 | Teacher: 2022-Present',
