@@ -41,6 +41,11 @@ function App() {
   }, [])
 
   useEffect(() => {
+    const revealAll = () =>
+      document
+        .querySelectorAll('[data-reveal]:not(.reveal-visible)')
+        .forEach((el) => el.classList.add('reveal-visible'))
+
     const revealEls = document.querySelectorAll('[data-reveal]')
 
     if (!('IntersectionObserver' in window)) {
@@ -60,7 +65,16 @@ function App() {
       { threshold: 0.05, rootMargin: '0px 0px -40px 0px' }
     )
     revealEls.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
+
+    const safety = setTimeout(revealAll, 2500)
+    const onLoad = () => setTimeout(revealAll, 300)
+    window.addEventListener('load', onLoad)
+
+    return () => {
+      observer.disconnect()
+      clearTimeout(safety)
+      window.removeEventListener('load', onLoad)
+    }
   }, [])
 
   return (

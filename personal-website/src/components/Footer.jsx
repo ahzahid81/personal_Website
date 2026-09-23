@@ -1,9 +1,8 @@
-import { FaLinkedin, FaEnvelope, FaHeart, FaGithub, FaPhoneAlt } from 'react-icons/fa'
+import { FaLinkedin, FaEnvelope, FaGithub, FaPhoneAlt } from 'react-icons/fa'
 
 const quickLinks = ['About', 'Experience', 'Projects', 'Education', 'Skills', 'Contact']
 
 export default function Footer() {
-  const year = new Date().getFullYear()
 
   return (
     <footer className="footer">
@@ -81,12 +80,6 @@ export default function Footer() {
               <li>Computer Vision</li>
             </ul>
           </div>
-        </div>
-      </div>
-
-      <div className="footer-bottom">
-        <div className="container">
-          <p>© {year} Abdul Hasib Zahid. Crafted with <FaHeart className="heart" /> </p>
         </div>
       </div>
     </footer>

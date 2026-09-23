@@ -164,7 +164,7 @@ html.js [data-reveal] {
   transform: translateY(30px);
 }
 
-[data-reveal].reveal-visible {
+html.js [data-reveal].reveal-visible {
   opacity: 1;
   transform: none;
 }
@@ -1752,7 +1752,7 @@ html.js [data-reveal] {
 /* ========== Footer ========== */
 .footer {
   background: #080f1f;
-  padding: 64px 0 0;
+  padding: 64px 0 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -1860,20 +1860,6 @@ html.js [data-reveal] {
   color: white;
   background: rgba(255, 255, 255, 0.06);
   transform: translateY(-2px);
-}
-
-.footer-bottom {
-  padding: 24px 0;
-  text-align: center;
-}
-
-.footer-bottom p {
-  color: rgba(255, 255, 255, 0.28);
-  font-size: 0.8rem;
-}
-
-.footer-bottom .heart {
-  color: #ef4444;
 }
 
 /* ========== Back to top ========== */
@@ -2210,7 +2196,8 @@ html.js [data-reveal] {
     transition-duration: 0.01ms !important;
   }
 
-  [data-reveal] {
+  [data-reveal],
+  html.js [data-reveal] {
     opacity: 1;
     transform: none;
   }
